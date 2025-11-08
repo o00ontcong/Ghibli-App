@@ -39,4 +39,11 @@ class MockGhibliService: GhibliService {
         let data = try loadSampleData()
         return data.people.first!
     }
+    
+    //MARK: - preview/testing only
+    
+    func fetchFilm() -> Film {
+        let data = try! loadSampleData()
+        return data.films.first!
+    }
 }
